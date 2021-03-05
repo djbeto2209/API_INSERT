@@ -65,21 +65,7 @@ for page in pages:
         request = requests.request("GET", url, headers=headers)     #Calls API to get data
         time.sleep(1)     #in seconds
         jCompany = request.json()     #converts data to json
-        #company = dict(json(company))  ##Should covert json to dict
-        #dictComp = json.loads(company)
-        #ind.append(company)     #appends json data in the 'ind' list 
-        #print(ind)    #for testing
-        #df = json_normalize(ind)
-        #sCompany = '[' + str(jCompany) + ']'
-        #dCompany = json.loads(jCompany)[0]
-        #print(jCompany['status'])
-        id = (jCompany['id'])  
-        print(type(id)) 
-  
-#raise SystemExit()
-
-
-
+          
     #####----- SQL Connection -----#####    
 
         server = 'SERVER NAME'
