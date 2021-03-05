@@ -10,13 +10,13 @@ from loguru import logger as Log
 headers = {'Content-Type': 'application/x-www-form-urlencoded',
     'Ocp-Apim-Subscription-Key': 'SUB_KEY'}
 
-avionte = 'https://partner-api.avionte.com/'
-address = avionte + "authorize/token?"
+x = 'API_URL'
+address = x + "authorize/token?"
 
 body = {'grant_type': 'client_credentials',
         'client_id':'CLIENT_ID',
         'client_secret':'SECRET',
-        'scope':'avionte.aero.compasintegrationservice'}
+        'scope':'SCOPE'}
 
 
 response = requests.post(address, headers=headers,data=body)
@@ -38,7 +38,7 @@ for page in pages:
     url = 'URL'
     bearer = 'Bearer ' + token
     headers = {
-        'Tenant':'pl1',
+        'Tenant':'TENANT',
         'authorization': bearer,
         'Ocp-Apim-Subscription-Key': 'SUB KEY',     #Primary
         'content-type': "application/json"
